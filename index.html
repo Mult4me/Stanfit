@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Мета-теги -->
+    <title>Кузьмина Марина | Профессиональный Фитнес-Тренер</title>
+    <meta name="description" content="Персональный фитнес-тренер Марина Кузьмина. Индивидуальные программы тренировок, планы питания, помощь в достижении идеальной формы. Узнайте о моих достижениях и сертификатах.">
+    <meta name="keywords" content="фитнес тренер, Марина Кузьмина, персональные тренировки, похудение, набор мышечной массы, фитнес, нутрициология, онлайн ведение">
+    <meta name="author" content="Кузьмина Марина">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph для соцсетей -->
+    <meta property="og:title" content="Кузьмина Марина | Профессиональный Фитнес-Тренер">
+    <meta property="og:description" content="Помогу создать тело вашей мечты. Индивидуальный подход, программы питания и тренировок.">
+    <meta property="og:type" content="profile">
+    <meta property="og:locale" content="ru_RU">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Настройка темы Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ff4500', // Энергичный оранжевый
+                        dark: '#111827',
+                        light: '#f3f4f6'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Шрифты и Иконки -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Schema.org микроразметка для SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Person",
+      "name": "Марина Кузьмина",
+      "jobTitle": "Фитнес-тренер",
+      "description": "Профессиональный персональный фитнес-тренер. Помогаю достичь спортивных целей.",
+      "url": "https://example.com",
+      "sameAs": [
+        "https://vk.com/",
+        "https://instagram.com/"
+      ]
+    }
+    </script>
+</head>
+<body class="bg-dark text-white font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Хедер -->
+    <header class="fixed w-full bg-dark/95 backdrop-blur-sm border-b border-gray-800 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Логотип -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-extrabold tracking-tighter text-white">
+                        MARINA<span class="text-primary">.FIT</span>
+                    </a>
+                </div>
+                <!-- Навигация (Desktop) -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-300 hover:text-primary transition-colors duration-300 text-sm font-semibold uppercase tracking-wider">Обо мне</a>
+                    <a href="#achievements" class="text-gray-300 hover:text-primary transition-colors duration-300 text-sm font-semibold uppercase tracking-wider">Достижения</a>
+                    <a href="#certificates" class="text-gray-300 hover:text-primary transition-colors duration-300 text-sm font-semibold uppercase tracking-wider">Сертификаты</a>
+                    <a href="#contacts" class="text-gray-300 hover:text-primary transition-colors duration-300 text-sm font-semibold uppercase tracking-wider">Контакты</a>
+                </nav>
+                <!-- Кнопка мобильного меню -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none" aria-label="Открыть меню">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Мобильное меню (скрыто по умолчанию) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 border-b border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Обо мне</a>
+                <a href="#achievements" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Достижения</a>
+                <a href="#certificates" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Сертификаты</a>
+                <a href="#contacts" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Контакты</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="flex-grow pt-20">
+        
+        <!-- Hero Секция -->
+        <section class="relative bg-gray-900 overflow-hidden">
+            <div class="max-w-7xl mx-auto">
+                <div class="relative z-10 pb-8 bg-gray-900 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32 pt-10 sm:pt-16 lg:pt-20 lg:px-8">
+                    <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 xl:mt-28">
+                        <div class="sm:text-center lg:text-left">
+                            <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
+                                <span class="block xl:inline">Кузьмина</span>
+                                <span class="block text-primary xl:inline">Марина</span>
+                            </h1>
+                            <p class="mt-3 text-base text-gray-400 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                                Твой персональный фитнес-наставник. Помогаю изменить не только тело, но и образ мышления. Здоровый подход к фитнесу без срывов и жестких диет.
+                            </p>
+                            <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                                <div class="rounded-md shadow">
+                                    <a href="#contacts" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-orange-600 transition-colors md:py-4 md:text-lg md:px-10">
+                                        Начать тренировки
+                                    </a>
+                                </div>
+                                <div class="mt-3 sm:mt-0 sm:ml-3">
+                                    <a href="#about" class="w-full flex items-center justify-center px-8 py-3 border border-gray-700 text-base font-medium rounded-md text-gray-300 bg-transparent hover:bg-gray-800 transition-colors md:py-4 md:text-lg md:px-10">
+                                        Узнать больше
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+            <!-- Фоновое изображение для десктопа -->
+            <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+                <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full opacity-80" 
+                     src="https://placehold.co/1200x800/111827/ff4500?text=Fitness+Trainer+Photo" 
+                     alt="Марина Кузьмина в тренажерном зале" 
+                     loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-r from-gray-900 to-transparent lg:block hidden"></div>
+            </div>
+        </section>
+
+        <!-- Секция Описание -->
+        <section id="about" class="py-20 bg-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-base text-primary font-semibold tracking-wide uppercase">Обо мне</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+                        Трансформация через любовь к себе
+                    </p>
+                </div>
+                <div class="mt-10 lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                    <div class="mb-10 lg:mb-0 rounded-2xl overflow-hidden shadow-xl shadow-primary/10 border border-gray-800">
+                        <img class="w-full object-cover h-96" src="https://placehold.co/800x1000/1e293b/ffffff?text=Тренировочный+Процесс" alt="Тренировка с Мариной Кузьминой" loading="lazy">
+                    </div>
+                    <div>
+                        <div class="space-y-6 text-gray-300 text-lg">
+                            <p>
+                                Привет! Я — Марина Кузьмина, сертифицированный персональный тренер и нутрициолог с более чем 5-летним опытом работы.
+                            </p>
+                            <p>
+                                Моя миссия — показать, что фитнес может быть в удовольствие. Я не верю в изнуряющие диеты и бесконечные кардио. Я верю в грамотно выстроенный тренировочный процесс, сбалансированное питание и работу с мышлением.
+                            </p>
+                            <p>
+                                <strong class="text-white">Что я предлагаю:</strong>
+                            </p>
+                            <ul class="space-y-3 list-none">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-primary mr-3"></i>
+                                    Персональные тренировки онлайн и офлайн
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-primary mr-3"></i>
+                                    Разработка индивидуального плана питания
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-primary mr-3"></i>
+                                    Поддержка 24/7 и мотивация на всех этапах
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-primary mr-3"></i>
+                                    Коррекция осанки и восстановление после травм
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция Достижения -->
+        <section id="achievements" class="py-20 bg-gray-900 border-t border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-base text-primary font-semibold tracking-wide uppercase">Мой опыт</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+                        Достижения и Результаты
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Достижение 1 -->
+                    <div class="bg-dark p-8 rounded-2xl border border-gray-800 hover:border-primary transition-colors duration-300 group text-center">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-trophy text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Спортивные разряды</h3>
+                        <p class="text-gray-400">Кандидат в мастера спорта (КМС) по пауэрлифтингу. Многократный призер региональных соревнований.</p>
+                    </div>
+                    <!-- Достижение 2 -->
+                    <div class="bg-dark p-8 rounded-2xl border border-gray-800 hover:border-primary transition-colors duration-300 group text-center">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-users text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Опыт работы</h3>
+                        <p class="text-gray-400">Более 500 успешных трансформаций подопечных. 5 лет непрерывной практики и ведения клиентов.</p>
+                    </div>
+                    <!-- Достижение 3 -->
+                    <div class="bg-dark p-8 rounded-2xl border border-gray-800 hover:border-primary transition-colors duration-300 group text-center">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-medal text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Фитнес Бикини</h3>
+                        <p class="text-gray-400">Топ-5 на чемпионате России по бодибилдингу в престижной категории Фитнес-бикини.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция Сертификаты -->
+        <section id="certificates" class="py-20 bg-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-base text-primary font-semibold tracking-wide uppercase">Образование</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+                        Дипломы и Сертификаты
+                    </p>
+                    <p class="mt-4 max-w-2xl text-xl text-gray-400 mx-auto">
+                        Постоянно развиваюсь и повышаю квалификацию, чтобы давать своим клиентам самые безопасные и эффективные методики.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Сертификат 1 -->
+                    <div class="group relative overflow-hidden rounded-xl border border-gray-800 bg-gray-900 p-2 cursor-pointer">
+                        <img src="https://placehold.co/400x560/1e293b/ffffff?text=FPA+Certificate" alt="Сертификат FPA Тренер по фитнесу" class="w-full h-auto rounded-lg transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                            <h4 class="text-white font-bold">Сертифицированный тренер (FPA)</h4>
+                        </div>
+                    </div>
+                    <!-- Сертификат 2 -->
+                    <div class="group relative overflow-hidden rounded-xl border border-gray-800 bg-gray-900 p-2 cursor-pointer">
+                        <img src="https://placehold.co/400x560/1e293b/ffffff?text=Nutritionist" alt="Диплом Нутрициолога" class="w-full h-auto rounded-lg transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                            <h4 class="text-white font-bold">Спортивный нутрициолог</h4>
+                        </div>
+                    </div>
+                    <!-- Сертификат 3 -->
+                    <div class="group relative overflow-hidden rounded-xl border border-gray-800 bg-gray-900 p-2 cursor-pointer">
+                        <img src="https://placehold.co/400x560/1e293b/ffffff?text=Functional+TRX" alt="Сертификат TRX" class="w-full h-auto rounded-lg transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                            <h4 class="text-white font-bold">Тренер по TRX и функциональному тренингу</h4>
+                        </div>
+                    </div>
+                    <!-- Сертификат 4 -->
+                    <div class="group relative overflow-hidden rounded-xl border border-gray-800 bg-gray-900 p-2 cursor-pointer">
+                        <img src="https://placehold.co/400x560/1e293b/ffffff?text=Rehabilitation" alt="Сертификат Реабилитационный фитнес" class="w-full h-auto rounded-lg transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                            <h4 class="text-white font-bold">Основы реабилитационного фитнеса</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Футер и Контакты -->
+    <footer id="contacts" class="bg-gray-900 border-t border-gray-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Блок 1: О тренере -->
+                <div>
+                    <span class="text-2xl font-extrabold tracking-tighter text-white">
+                        MARINA<span class="text-primary">.FIT</span>
+                    </span>
+                    <p class="mt-4 text-gray-400 text-sm">
+                        Инвестируйте в свое здоровье сегодня, чтобы наслаждаться активной жизнью завтра. Ваше тело может больше, чем вы думаете.
+                    </p>
+                </div>
+
+                <!-- Блок 2: Быстрые ссылки -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Навигация</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#about" class="hover:text-primary transition-colors">Обо мне</a></li>
+                        <li><a href="#achievements" class="hover:text-primary transition-colors">Достижения</a></li>
+                        <li><a href="#certificates" class="hover:text-primary transition-colors">Сертификаты</a></li>
+                    </ul>
+                </div>
+
+                <!-- Блок 3: Социальные сети -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Связаться со мной</h3>
+                    <p class="text-sm text-gray-400 mb-4">Подписывайтесь на мои социальные сети для получения полезных советов и записи на тренировки:</p>
+                    
+                    <div class="flex space-x-4">
+                        <!-- VK -->
+                        <a href="https://vk.com/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-[#0077FF] hover:text-white transition-all duration-300 shadow-lg" aria-label="Профиль ВКонтакте">
+                            <i class="fab fa-vk text-xl"></i>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-gradient-to-r hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:text-white transition-all duration-300 shadow-lg" aria-label="Профиль Instagram">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <!-- Max (В качестве универсального мессенджера/платформы используем стилизованную иконку) -->
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all duration-300 shadow-lg" aria-label="Профиль Max">
+                            <i class="fas fa-bolt text-xl"></i> <!-- Использована молния как символ "Max" энергии -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>&copy; <span id="current-year"></span> Кузьмина Марина. Все права защищены.</p>
+                <p class="mt-2 md:mt-0">Разработано с <i class="fas fa-heart text-primary mx-1"></i> к фитнесу</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript для меню и логики -->
+    <script>
+        // Установка текущего года в футере
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Логика мобильного меню
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const menuLinks = menu.querySelectorAll('a');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Закрывать мобильное меню при клике на ссылку
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
